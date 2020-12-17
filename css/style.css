@@ -32,25 +32,31 @@ img{ border: none;}
 /*inspector 검수용스타일은 스타일을 구체적 !important 넣는다*/
 .red{ border-bottom:red 1px solid !important;}
 
-
+/*애니메이션불가 display 값 auto인 것 > keyframes도 안됨 */
 /*레이아웃*/
 header#hd{ padding: 15px 0}
 #hd a, #hd img{display: block;}
-#gnb > li{ background: green; height: 46px;}
+#gnb > li{
+   /* background: green; */
+    height: 46px;}
 #gnb > li > a{
   font-weight: bold; font-size: 18px; line-height: 46px; padding-left: 2em;
   padding-bottom: 15px;
-  background: yellow;
+
 }
 #gnb .d2{
   background-color: black; top:calc(100% + 15px);
   left: 15px; padding: 0px 15px; width: 100px;
   height: 0; transition: 0.5s; overflow: hidden;}
+
 #gnb .d2  a{font-size: 0.9em; line-height: 1.5; color: white;}
+#gnb .d2:before{content: ""; display: block; height: 15px;}
+
 #gnb li:nth-child(1) .d2{left: 30px;}
 #gnb li:nth-child(4) .d2{width: 70px;}
 
 #gnb > li:hover .d2{ height: 120px;}
+#gnb > li:hover > a{color: #009688;}
 
 section#main{}
 
